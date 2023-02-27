@@ -1,4 +1,4 @@
-//Dieser simple Taschenrechner verrechnet zwei vom User bestimmbare Zahlen miteinander und gibt das Ergebnis anschliessend in der Console aus.
+//This simple calculator computes two user-definable numbers and then displays the result in the console.
 
 int option = 1;
 
@@ -12,26 +12,26 @@ while (option != 0)
 
         Console.WriteLine();
 
-        Console.WriteLine("1 - Addition");
+        Console.WriteLine("1 - PLUS");
         Thread.Sleep(500);
-        Console.WriteLine("2 - Subtraktion");
+        Console.WriteLine("2 - MINUS");
         Thread.Sleep(500);
-        Console.WriteLine("3 - Multiplikation");
+        Console.WriteLine("3 - MULTIPLY");
         Thread.Sleep(500);
-        Console.WriteLine("4 - Division");
+        Console.WriteLine("4 - DIVIDE");
         Thread.Sleep(500);
 
         Console.WriteLine();
 
-        Console.WriteLine("Mit (0) wird das Programm beendet.");
-        Console.Write("Gewünschte Operation mit Zahl zwischen 1-4 eintippen: ");
+        Console.WriteLine("Type (0) to close the app.");
+        Console.Write("Type in desired operation with number between 1-4: ");
         option = Convert.ToInt32(Console.ReadLine());
         Console.Clear();
 
         switch (option)
         {
             case 0:
-                Console.Write("Taschenrechner beendet.");
+                Console.Write("Calculator closed.");
                 break;
             case 1:
                 addition();
@@ -46,7 +46,7 @@ while (option != 0)
                 divide();
                 break;
             default:
-                Console.WriteLine("Wählen Sie eine Zahl zwischen 1 und 4. Versuchen Sie es erneut.\n");
+                Console.WriteLine("Type in desired operation with number between 1-4. Try again.\n");
                 Thread.Sleep(3000);
                 Console.Clear();
                 break;
@@ -63,10 +63,10 @@ while (option != 0)
         double n1 = 0;
         double result;
 
-        Console.Write("Zahl 1: ");
+        Console.Write("Number 1: ");
         n0 = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Zahl 2: ");
+        Console.Write("Number 2: ");
         n1 = Convert.ToDouble(Console.ReadLine());
 
         result = n0 + n1;
@@ -80,10 +80,10 @@ while (option != 0)
         double n1 = 0;
         double result;
 
-        Console.Write("Zahl 1: ");
+        Console.Write("Number 1: ");
         n0 = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Zahl 2: ");
+        Console.Write("Number 2: ");
         n1 = Convert.ToDouble(Console.ReadLine());
 
         result = n0 - n1;
@@ -97,10 +97,10 @@ while (option != 0)
         double n1 = 0;
         double result;
 
-        Console.Write("Zahl 1: ");
+        Console.Write("Number 1: ");
         n0 = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Zahl 2: ");
+        Console.Write("Number 2: ");
         n1 = Convert.ToDouble(Console.ReadLine());
 
         result = n0 * n1;
@@ -114,16 +114,16 @@ while (option != 0)
         double n1 = 0;
         double result;
 
-        Console.Write("Zahl 1: ");
+        Console.Write("Number 1: ");
         n0 = Convert.ToDouble(Console.ReadLine());
 
 
-        Console.Write("Zahl 2: ");
+        Console.Write("Number 2: ");
         n1 = Convert.ToDouble(Console.ReadLine());
 
         if (n1 == 0)
         {
-            Console.WriteLine("Zahl 0 ist kein zulässiger Divisor. Versuchen Sie es erneut.\n");
+            Console.WriteLine("The number 0 is not a permissible divisor. Try again.\n");
             Thread.Sleep(300);
             divide();
         }
